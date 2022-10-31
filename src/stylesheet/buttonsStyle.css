@@ -1,0 +1,28 @@
+button {
+    cursor: pointer;
+    height: 48px;
+}
+
+.button-style-1 {
+    color: var(--color-blue);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-blue);
+}
+
+.button-style-2 {
+    color: var(--color-white);
+    background-color: var(--color-blue);
+    border: 1px solid var(--color-blue);
+}
+
+.button-style-3 {
+    color: var(--color-white);
+    background-color: var(--color-green);
+    border: 1px solid var(--color-green);
+}
+
+.button-style-4 {
+    color: var(--color-red);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-red);
+}
