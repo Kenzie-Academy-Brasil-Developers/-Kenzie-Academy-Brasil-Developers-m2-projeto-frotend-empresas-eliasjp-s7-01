@@ -17,31 +17,52 @@
 
         <!-- Local CSS -->
 
+        <link rel="stylesheet" href="pages/home/index.css">
+        <link rel="stylesheet" href="pages/home/container.css">
         <link rel="stylesheet" href="pages/home/header.css">
+        <link rel="stylesheet" href="pages/home/sector-dropdown.css">
+        <link rel="stylesheet" href="pages/home/company-list.css">
 
         <!-- Javascript -->
 
+        <script defer src="pages/home/menu-dropdown.js"></script>
+        <script defer src="pages/home/company-list.js" type="module"></script>
+        <script defer src="pages/home/sector-dropdown.js" type="module"></script>
 
         <title>Kenzie Empresas</title>
 
     </head>
 
     <body>
-        <header class="home-header">
-            <div class="logo-header">
-                <div class="ball"></div>
-                <h1 class="title">Kenzie Empresas</h1>
-            </div>
-
-            <div class="dropdown-menu">
-                <button class="dropdown-button"><img src=""></button>
-
-                <div class="buttons-header">
-                    <button class="login button-style-4">Login</button>
-                    <button class="register">Cadastrar</button>
+        <div class="container">
+            <header class="home-header">
+                <div class="logo-header">
+                    <div class="ball"></div>
+                    <h1 class="title">Kenzie Empresas</h1>
                 </div>
-            </div>
-        </header>
+
+                <div class="dropdown-menu">
+                    <button class="dropdown-button"><img class="dropdown-image" src="src/images/icons/menu-dropdown.svg"></button>
+
+                </div>
+                <div class="buttons-header">
+                    <button class="login button-style-1">Login</button>
+                    <button class="register button-style-2">Cadastrar</button>
+                </div>
+            </header>
+
+            <section class="main-section">
+                <img>
+                <main class="company-info">
+                    <button class="sector-dropdown button-style-2">
+                        <p class="button-inner">Selecionar Setor</p>
+                        <img class="sector-dropdown-image" src="src/images/icons/expand.svg">
+                    </button>
+                    <ul class="sector-list"></ul>
+
+                    <ul class="company-list"></ul>
+                </main>
+        </div>
     </body>
 
 </html>

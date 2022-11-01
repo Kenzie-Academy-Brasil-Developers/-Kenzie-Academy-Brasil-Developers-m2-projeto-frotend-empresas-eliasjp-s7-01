@@ -1,0 +1,60 @@
+/* Header */
+
+.home-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.title {
+    font-size: var(--font-size-5);
+}
+
+/* Logo */
+
+.logo-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ball {
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background-color: var(--color-blue);
+    opacity: 0.5;
+}
+
+/* Buttons */
+
+.dropdown-button {
+    width: 31px;
+    height: 31px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white);
+    border: none;
+}
+
+.dropdown-image {
+    width: 31px;
+    height: 31px;
+}
+
+.buttons-header {
+    position: absolute;
+    display: none;
+    background-color: black;
+    width: 100%;
+    bottom: -48px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.login, .register {
+    width: 142px;
+}

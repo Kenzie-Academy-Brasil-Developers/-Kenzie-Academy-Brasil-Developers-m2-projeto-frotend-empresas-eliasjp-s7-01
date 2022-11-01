@@ -5,14 +5,20 @@
     margin: 0;
 }
 
+html, body {
+    height: 100%;
+}
+
 :root {
     /* Colors */
 
     --color-blue: #4200FF;
+    --color-blue-50a: #4400FF80;
     --color-white: #FFFFFF;
     --color-black: #000000;
     --color-red: #CE4646;
     --color-green: #4BA036;
+    --color-grey: #6F6F6F;
 
     /* Font */
 

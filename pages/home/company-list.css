@@ -1,0 +1,39 @@
+.company-list {
+    display: flex;
+    overflow-x: scroll;
+    justify-content: start;
+    gap: 50px;
+    padding: 10px;
+    margin-top: 25px;
+}
+
+.company-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 241px;
+    border-bottom: 1px solid var(--color-blue-50a);
+    padding: 13px 15px;
+}
+
+.company-name {
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-1);
+}
+
+.opening-hours {
+    font-size: var(--font-size-6);
+    font-weight: var(--font-weight-4);
+    margin-top: 74px;
+}
+
+.company-card-sector {
+    font-size: var(--font-size-6);
+    font-weight: var(--font-weight-4);
+    color: var(--color-blue);
+    border: 1px solid var(--color-blue);
+    align-self: flex-start;
+    padding: 6px 16px;
+    border-radius: 255px;
+    margin-top: 22px;
+    margin-bottom: 26px;
+}
