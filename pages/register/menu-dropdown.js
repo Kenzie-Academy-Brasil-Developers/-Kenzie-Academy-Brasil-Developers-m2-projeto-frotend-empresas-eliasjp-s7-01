@@ -18,7 +18,7 @@ function menuDropdown (){
 }
 
 function login (){
-    const querybutton = document.querySelector(`.login`)
+    const querybutton = document.querySelector(`.home`)
 
     querybutton.addEventListener(`click`, () => {
         // location login

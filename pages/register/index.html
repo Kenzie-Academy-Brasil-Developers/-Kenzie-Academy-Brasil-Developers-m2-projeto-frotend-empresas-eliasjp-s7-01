@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Global CSS -->
+
+    <link rel="stylesheet" href="../../src/stylesheet/globalStyle.css">
+    <link rel="stylesheet" href="../../src/stylesheet/buttonsStyle.css">
+    <link rel="stylesheet" href="../../src/stylesheet/toastfy.css">
+
+    <!-- Local CSS -->
+
+    <link rel="stylesheet" href="container.css">
+    <link rel="stylesheet" href="background.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="form.css">
+
+    <!-- Desktop CSS -->
+
+    <link rel="stylesheet" href="desktop.css">
+
+    <!-- Javascript -->
+
+    <script defer src="menu-dropdown.js"></script>
+    <script defer src="form.js" type="module"></script>
+
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="home-header">
+            <div class="header-container">
+                <div class="logo-header">
+                    <div class="ball"></div>
+                    <h1 class="title">Kenzie Empresas</h1>
+                </div>
+
+                <div class="dropdown-menu">
+                    <button class="dropdown-button"><img class="dropdown-image" src="../../src/images/icons/menu-dropdown.svg"></button>
+                </div>
+                <div class="buttons-header">
+                    <button class="home button-style-1">Home</button>
+                    <button class="register button-style-2">Cadastrar</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- <div class="background-container"> -->
+            <img class="background-image" src="../../src/images/background/background-image.svg">
+        <!-- </div> -->
+
+        <main class="main-content">
+            <form id="register-form" onsubmit="return false">
+                <h3 class="form-title">Cadastre-se</h3>
+                <input class="username" name="username" placeholder="Seu nome" required="true">
+                <input class="email" name="email" placeholder="Digite seu email" required="true" type="email">
+                <input class="password" name="password" placeholder="Sua senha" required="true" type="password">
+                <select class="profession-level" name="profession_level">
+                    <option value="">Nível Profissional</option>
+                    <option value="estágio">Estágiario</option>
+                    <option value="júnior">Júnior</option>
+                    <option value="pleno">Pleno</option>
+                    <option value="sênior">Sênior</option>
+                </select>
+            </form>
+            <div class="button-container-form">
+                <button class="submit-form button-style-2" form="register-form">Cadastrar-se</button>
+                <button class="home-page-button button-style-1">Retornar</button>
+            </div>
+    </div>
+</body>
+</html>
