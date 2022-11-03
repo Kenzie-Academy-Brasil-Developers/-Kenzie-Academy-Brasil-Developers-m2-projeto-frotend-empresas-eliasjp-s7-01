@@ -21,7 +21,7 @@ function login (){
     const querybutton = document.querySelector(`.login`)
 
     querybutton.addEventListener(`click`, () => {
-        // location login
+        window.location.assign("../../pages/login/index.html", "_self")
     })
 }
 

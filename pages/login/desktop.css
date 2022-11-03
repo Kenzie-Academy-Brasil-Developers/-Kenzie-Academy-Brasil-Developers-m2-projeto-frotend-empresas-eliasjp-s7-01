@@ -27,8 +27,8 @@
     /* Form */
 
     .main-content {
-        display: flex;
         max-width: 506px;
+        display: flex;
         margin: 0 auto;
         margin-top: 143px;
         padding: 40px 42px;

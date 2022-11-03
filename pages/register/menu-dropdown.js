@@ -17,22 +17,22 @@ function menuDropdown (){
     })
 }
 
+function home (){
+    const querybutton = document.querySelector(`.login`)
+
+    querybutton.addEventListener(`click`, () => {
+        window.location.assign("../../pages/login/index.html", "_self")
+    })
+}
+
 function login (){
     const querybutton = document.querySelector(`.home`)
 
     querybutton.addEventListener(`click`, () => {
-        // location login
-    })
-}
-
-function register (){
-    const querybutton = document.querySelector(`.register`)
-
-    querybutton.addEventListener(`click`, () => {
-        window.location.assign("../../pages/register/index.html", "_self")
+        window.location.assign("../../index.html", "_self")
     })
 }
 
 menuDropdown ()
 login ()
-register()
+home()
