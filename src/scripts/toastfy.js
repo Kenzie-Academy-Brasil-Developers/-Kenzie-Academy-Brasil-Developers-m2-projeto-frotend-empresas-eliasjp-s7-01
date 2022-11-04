@@ -12,5 +12,9 @@ export function toastfy (message, type){
     toastfyContainer.append(popUp)      
     popUp.append(content)
 
+    setTimeout(() => {
+      toastfyContainer.remove()
+    }, 8100)
+
     return toastfyContainer
 }

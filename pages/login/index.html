@@ -29,6 +29,8 @@
 
     <!-- Javascript -->
 
+    <script defer src="menu-dropdown.js"></script>
+    <script defer src="form.js" type="module"></script>
 
     <title>Document</title>
 
@@ -57,14 +59,14 @@
         <img class="background-image" src="../../src/images/background/background-image.svg">
 
         <main class="main-content">
-            <form id="register-form" onsubmit="return false">
+            <form id="login-form" onsubmit="return false">
                 <h3 class="form-title">Login</h3>
                 <p class="title-description">Preencha os campos para realizar o login</p>
                 <input class="email" name="email" placeholder="Digite seu email" required="true" type="email">
                 <input class="password" name="password" placeholder="Sua senha" required="true" type="password">
             </form>
             <div class="button-container-form">
-                <button class="submit-form button-style-2" form="register-form">Login</button>
+                <button class="submit-form button-style-2" form="login-form">Login</button>
                 <button class="home-page-button button-style-1">Cadastre-se</button>
             </div>
     </div>
