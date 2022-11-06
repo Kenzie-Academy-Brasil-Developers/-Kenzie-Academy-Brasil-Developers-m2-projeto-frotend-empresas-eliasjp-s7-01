@@ -15,7 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    position: absolute;
+    position: fixed;
     animation-name: popUp;
     animation-duration: 8s;
     animation-iteration-count: infinite;

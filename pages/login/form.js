@@ -1,5 +1,5 @@
-import { loginAccount } from "../../src/scripts/api.js"
-import { modal } from "../../src/scripts/modal.js"
+import { loginAccount, userType } from "../../src/scripts/api.js"
+import { setLocal } from "../../src/scripts/storage.js"
 import { toastfy } from "../../src/scripts/toastfy.js"
 
 function loginForm (){
@@ -17,19 +17,30 @@ function loginForm (){
                 object[element.name] = element.value
             }
         })
-        const loginEvent = await loginAccount (object)
-        if (typeof loginEvent != "boolean"){
-            body.append(toastfy (loginEvent.error, "fail"))
-        } else if (loginEvent == true){
-            console.log(loginEvent)
-            const body = document.querySelector(`body`)
-            body.append(modal ("texto", "placeholder"))
-            // location admin dashboard
-        } else if (!loginEvent == false){
-            console.log(loginEvent)
-            // location normal user
+
+        const loginFetch = await loginAccount (object)
+
+        if (loginFetch.token){
+            setLocal ("user_token", loginFetch)
+            if (await userType (loginFetch.token)){
+                window.location.assign("../../pages/admin-dashboard/index.html", "_self")
+            } else {
+                window.location.assign("../../pages/user-dashboard/index.html", "_self")
+            }
+        } else {
+            console.log(loginFetch)
+            body.append(toastfy (loginFetch.error, "fail"))
         }
     })
 }
 
+function assignRegisterButton (){
+    const button = document.querySelector(`.register-button`)
+
+    button.addEventListener(`click`, () => {
+        window.location.assign("../../pages/register/index.html", "_self")
+    })
+}
+
+assignRegisterButton ()
 loginForm ()

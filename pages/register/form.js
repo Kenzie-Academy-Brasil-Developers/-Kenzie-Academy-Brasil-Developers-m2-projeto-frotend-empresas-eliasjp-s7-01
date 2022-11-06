@@ -30,4 +30,13 @@ function registerForm (){
     })
 }
 
+function assignReturnButton (){
+    const button = document.querySelector(`.home-page-button`)
+
+    button.addEventListener(`click`, () => {
+        window.location.assign("../../index.html", "_self")
+    })
+}
+
+assignReturnButton ()
 registerForm ()

@@ -13,7 +13,10 @@ export async function getCompany (){
     const url = "http://localhost:6278"
     
     const companies = await fetch (`${url}/companies`, {
-        method: "GET"
+        method: "GET",
+        headers: {
+            "Authorization": "Bearer null"
+        }
     })
     .then(resp => resp.json())
 
@@ -63,13 +66,7 @@ export async function loginAccount (object){
         body: JSON.stringify(object)
     })
     .then (async resp => {
-        if (resp.ok){
-            const response = await resp.json()
-            const accountToken = response.token
-            return userType (accountToken)
-        } else if (!resp.ok){
-            return resp.json()
-        }
+        return resp.json()
     })
 
     return loginUser
@@ -90,4 +87,90 @@ export async function userType (token){
     })
 
     return type
+}
+
+export async function allDepartments (token){
+    const url = "http://localhost:6278"
+    
+    const allDepart = await fetch (`${url}/departments`, {
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    })
+    .then (async resp => resp.json())
+
+    return allDepart
+}
+
+export async function allWorkers (token){
+    const url = "http://localhost:6278"
+    
+    const everyWorkers = await fetch (`${url}/users`, {
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    })
+    .then (resp => resp.json())
+
+    return everyWorkers
+}
+
+export async function outOfWorkUsers (token){
+    const url = "http://localhost:6278"
+
+    const outOfWork = await fetch (`${url}/admin/out_of_work`, {
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    })
+    .then (resp => resp.json())
+
+    return outOfWork
+}
+
+export async function hireWorker (object, token){
+    const url = "http://localhost:6278"
+
+    const hire = await fetch (`${url}/departments/hire/`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify(object) 
+    })
+    .then (resp => resp.json())
+
+    return hire
+}
+
+export async function allWorkersFromDepartment (token){
+    const url = "http://localhost:6278"
+
+    const allWorkersDepart = await fetch (`${url}/users/departments/coworkers`, {
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    })
+    .then (resp => resp.json())
+
+    return allWorkersDepart
+}
+
+export async function fireWorkerFromDepartment (token, id){
+    const url = "http://localhost:6278"
+
+    const fireWorker = await fetch (`${url}/departments/dismiss/${id}`, {
+        method: "PATCH",
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    })
+    .then (resp => resp.json())
+
+    return fireWorker
 }

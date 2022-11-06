@@ -1,0 +1,30 @@
+.department-section {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.department-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select-company {
+    border: 1px solid var(--color-black);
+    border-radius: 15px;
+}
+
+.create-department {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 28px 0 35px;
+    justify-content: space-evenly;
+}
+
+.add {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 5px;
+}
