@@ -1,6 +1,7 @@
-import { getCompany, allDepartments} from "../../src/scripts/api.js"
+import { getCompany, allDepartments, allDepartmentsFromCompany } from "../../src/scripts/api.js"
 import { getLocal } from "../../src/scripts/storage.js"
 import { infoModal } from "../../pages/admin-dashboard/edit-info.js"
+import { editDepartmentModal } from "../../pages/admin-dashboard/edit-department.js"
 import { modal } from "../../src/scripts/modal.js"
 
 async function departments (){
@@ -16,8 +17,26 @@ async function departments (){
             select.append(createOptions (company.name))
       })
 
-      select.addEventListener(`change`, (e) => {
-            console.log(e.target.value)
+      select.addEventListener(`change`,async (e) => {
+            departmentsList.innerHTML = ""
+            if (select.value == "Todos"){
+                  arrayDepartments.forEach(department => {
+                        departmentsList.append(renderDepartments (department))
+                  })
+            }else {
+                  let companyIdForRender = ""
+                  companies.forEach(company => {
+                        if (company.name == select.value){
+                              companyIdForRender = company.uuid
+                        }
+                  })
+                  console.log(companyIdForRender)
+                  const arrayDepartFromCompany = await allDepartmentsFromCompany (userToken.token, companyIdForRender)
+                  console.log(arrayDepartFromCompany)
+                  arrayDepartFromCompany.forEach(department => {
+                        departmentsList.append(renderDepartments (department))
+                  })
+            }
       })
 
       arrayDepartments.forEach(department => {
@@ -32,7 +51,7 @@ function createOptions (name){
       return option
 }
 
-function renderDepartments (object){
+export function renderDepartments (object){
       const body = document.querySelector(`body`)
 
       const li = document.createElement(`li`)
@@ -66,6 +85,9 @@ function renderDepartments (object){
 
       const changeDescription = document.createElement(`button`)
             changeDescription.classList = `change-department-description`
+            changeDescription.addEventListener(`click`, () => {
+                  body.append(modal (editDepartmentModal (object)))
+            })
 
       const changeDescriptionIcon = document.createElement(`img`)
             changeDescriptionIcon.classList = `button-icon`

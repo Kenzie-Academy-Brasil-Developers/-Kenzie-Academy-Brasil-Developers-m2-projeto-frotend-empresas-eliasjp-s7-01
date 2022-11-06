@@ -174,3 +174,43 @@ export async function fireWorkerFromDepartment (token, id){
 
     return fireWorker
 }
+
+export async function createDepartmentAPI (token, object){
+    const url = "http://localhost:6278"
+
+    const createDepartment = fetch (`${url}/departments`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify(object)
+    })
+}
+
+export async function allDepartmentsFromCompany (token, companyID){
+    const url = "http://localhost:6278"
+    
+    const arrayDepartmentsFromCompany = await fetch (`${url}/departments/${companyID}`, {
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    })
+    .then (resp => resp.json())
+
+    return arrayDepartmentsFromCompany
+}
+
+export async function editDepartmentAPI (token, departmentID, object){
+    const url = "http://localhost:6278"
+
+    await fetch (`${url}/departments/${departmentID}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify(object)
+    })
+}

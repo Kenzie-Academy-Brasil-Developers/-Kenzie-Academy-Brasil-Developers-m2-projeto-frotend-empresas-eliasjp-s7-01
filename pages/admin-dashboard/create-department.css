@@ -1,0 +1,13 @@
+.create-department-form {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.create-department-name-input, .create-department-description-input {
+    height: 52px;
+}
+
+.create-department-select {
+    height: 52px;
+}

@@ -1,0 +1,11 @@
+.edit-department-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.edit-department-textarea {
+    height: 150px;
+    padding: 10px;
+    resize: none;
+}
