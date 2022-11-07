@@ -267,7 +267,7 @@ export async function userInformation (token){
 export async function attUserInformation (token, object){
     const url = "http://localhost:6278"
 
-    const teste =await fetch (`${url}/users`, {
+    await fetch (`${url}/users`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json",
@@ -276,4 +276,18 @@ export async function attUserInformation (token, object){
         body: JSON.stringify(object)
     })
     .then (resp => resp.json())
+}
+
+export async function allCoworkers (token){
+    const url = "http://localhost:6278"
+
+    const coworkers = await fetch (`${url}/users/departments/coworkers`, {
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    })
+    .then (resp => resp.json())
+
+    return coworkers
 }

@@ -2,6 +2,7 @@ import { userInformation, attUserInformation } from "../../src/scripts/api.js"
 import { getLocal } from "../../src/scripts/storage.js"
 import { modal } from "../../src/scripts/modal.js"
 import { informationUsername } from "../../pages/user-dashboard/user-information.js"
+import { renderCoworkers } from "../../pages/user-dashboard/user-coworkers.js"
 
 export async function editInformationEvent (){
     const body = document.querySelector(`body`)
@@ -57,6 +58,7 @@ function editInformationForm (token){
         })
         await attUserInformation (token, object)
         await informationUsername ()
+        renderCoworkers ()
         
         const modal = document.querySelector(`.modal-background`)
         modal.remove()

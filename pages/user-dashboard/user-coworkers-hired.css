@@ -1,0 +1,30 @@
+.section-title-container {
+    width: 1440px;
+    height: 72px;
+    background-color: var(--color-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title {
+    font-size: var(--font-size-2);
+    color: var(--color-white);
+}
+
+.coworkers-list {
+    list-style-type: none;
+    padding: 59px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 54px;
+}
+
+.coworker-card {
+    width: 318px;
+    padding: 12px 23px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    border: 1px solid var(--color-blue);
+}
