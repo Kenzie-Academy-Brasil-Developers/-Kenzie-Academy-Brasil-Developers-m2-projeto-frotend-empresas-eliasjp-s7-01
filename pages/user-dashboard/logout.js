@@ -5,7 +5,7 @@ function logoutEvent (){
 
     button.addEventListener(`click`, () => {
         removeLocal ("user_token")
-        window.location.assign("../../pages/login/index.html", "_self")
+        window.location.assign("../../index.html", "_self")
     })
 }
 
