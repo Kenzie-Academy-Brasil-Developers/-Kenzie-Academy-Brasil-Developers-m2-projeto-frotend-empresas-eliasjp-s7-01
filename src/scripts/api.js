@@ -249,3 +249,31 @@ export async function deleteUserADMIN (token, userID){
         }
     })
 }
+
+export async function userInformation (token){
+    const url = "http://localhost:6278"
+
+    const userInfo = await fetch (`${url}/users/profile`, {
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    })
+    .then (resp => resp.json())
+
+    return userInfo
+}
+
+export async function attUserInformation (token, object){
+    const url = "http://localhost:6278"
+
+    const teste =await fetch (`${url}/users`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify(object)
+    })
+    .then (resp => resp.json())
+}

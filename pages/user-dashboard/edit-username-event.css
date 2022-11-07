@@ -1,0 +1,15 @@
+.edit-information-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.edit-information-form-title {
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-1);
+}
+
+.edit-information-form-input-username, .edit-information-form-input-email, .edit-information-form-input-password {
+    height: 52px;
+    padding: 0 10px;
+}
