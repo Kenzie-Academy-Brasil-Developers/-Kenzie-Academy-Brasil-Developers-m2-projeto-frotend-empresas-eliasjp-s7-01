@@ -11,3 +11,8 @@
 .create-department-select {
     height: 52px;
 }
+
+.create-department-title {
+        font-size: var(--font-size-2);
+        font-weight: var(--font-weight-1);
+}

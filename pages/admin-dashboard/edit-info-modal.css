@@ -9,6 +9,16 @@
     justify-content: space-between;
 }
 
+.info-modal-title {
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-1);
+}
+
+.info-modal-description {
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-1);
+}
+
 .info-modal-department {
     display: flex;
     flex-direction: column;

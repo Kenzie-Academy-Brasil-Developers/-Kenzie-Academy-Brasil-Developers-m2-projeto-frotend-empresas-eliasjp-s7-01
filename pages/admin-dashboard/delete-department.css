@@ -5,3 +5,8 @@
     margin: 0 auto;
     gap: 30px;
 }
+
+.delete-department-title {
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-1);
+}
