@@ -1,0 +1,48 @@
+body {
+    position: relative;
+}
+
+.toastfy-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.toastfy {
+    width: 207px;
+    height: 68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: fixed;
+    animation-name: popUp;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+.toastfy-success {
+    background-color: var(--color-green);
+}
+
+.toastfy-fail {
+    background-color: var(--color-red);
+}
+
+@keyframes popUp {
+    0% {
+        bottom: -75px;
+    }
+
+    10% {
+        bottom: 0;
+    }
+
+    75% {
+        bottom: 0;
+    }
+
+    100% {
+        bottom: -75px;
+    }
+}

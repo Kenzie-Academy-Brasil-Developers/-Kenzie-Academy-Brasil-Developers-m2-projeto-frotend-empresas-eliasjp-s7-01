@@ -1,0 +1,25 @@
+.edit-user-list-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.edit-user-list-title {
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-1);
+}
+
+.edit-user-list-modality, .edit-user-list-professional-level {
+    height: 52px;
+}
+
+.delete-user-list-title {
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-1);
+}
+
+.delete-user-list-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

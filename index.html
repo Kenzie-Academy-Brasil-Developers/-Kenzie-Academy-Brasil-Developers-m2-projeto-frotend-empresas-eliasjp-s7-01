@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Global CSS -->
+        
+        <link rel="stylesheet" href="src/stylesheet/globalStyle.css">
+        <link rel="stylesheet" href="src/stylesheet/buttonsStyle.css">
+
+        <!-- Local CSS -->
+
+        <link rel="stylesheet" href="pages/home/index.css">
+        <link rel="stylesheet" href="pages/home/container.css">
+        <link rel="stylesheet" href="pages/home/header.css">
+        <link rel="stylesheet" href="pages/home/sector-dropdown.css">
+        <link rel="stylesheet" href="pages/home/company-list.css">
+
+        <!-- Desktop CSS -->
+
+        <link rel="stylesheet" href="pages/home/desktop.css">
+        
+
+        <!-- Javascript -->
+
+        <script defer src="pages/home/menu-dropdown.js"></script>
+        <script defer src="pages/home/company-list.js" type="module"></script>
+        <script defer src="pages/home/sector-dropdown.js" type="module"></script>
+
+        <title>Kenzie Empresas</title>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <header class="home-header">
+                <div class="header-container">
+                    <div class="logo-header">
+                        <div class="ball"></div>
+                        <h1 class="title">Kenzie Empresas</h1>
+                    </div>
+
+                    <div class="dropdown-menu">
+                        <button class="dropdown-button"><img class="dropdown-image" src="src/images/icons/menu-dropdown.svg"></button>
+                    </div>
+                    <div class="buttons-header">
+                        <button class="login button-style-1">Login</button>
+                        <button class="register button-style-2">Cadastrar</button>
+                    </div>
+                </div>
+            </header>
+
+            <section class="main-section">
+                <div class="image-container">
+                    <img class="display-image" src="src/images/background/background-image.svg">
+                </div>
+                <main class="company-info">
+                    <button class="sector-dropdown button-style-2">
+                        <p class="button-inner">Selecionar Setor</p>
+                        <img class="sector-dropdown-image" src="src/images/icons/expand.svg">
+                    </button>
+                    <ul class="sector-list"></ul>
+
+                    <ul class="company-list"></ul>
+                </main>
+        </div>
+    </body>
+
+</html>

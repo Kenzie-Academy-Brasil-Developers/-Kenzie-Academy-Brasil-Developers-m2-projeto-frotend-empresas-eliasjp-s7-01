@@ -1,0 +1,36 @@
+@media (min-width: 1024px){
+    /* Header */
+
+    .home-header {
+        max-width: 100%;
+    }
+
+    .header-container {
+        max-width: 1440px;
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .dropdown-menu {
+        display: none;
+    }
+
+    .buttons-header {
+        display: flex;
+        position: static;
+        align-items: center;
+        height: 100%;
+        gap: 11px;
+        bottom: 0px;
+    }
+
+    /* Form */
+
+    .main-content {
+        display: flex;
+        max-width: 506px;
+        margin: 0 auto;
+        margin-top: 143px;
+        padding: 40px 42px;
+    }
+}

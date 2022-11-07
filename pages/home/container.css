@@ -1,0 +1,8 @@
+.container {
+    max-width: 100vw;
+    padding: 27px;
+}
+
+.image-container {
+    display: none;
+}

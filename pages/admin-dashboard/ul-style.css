@@ -1,0 +1,16 @@
+.ul-department {
+    width: 1440px;
+    max-height: 385px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 19px;
+}
+
+.department-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 52px 85px;
+    gap: 92px;
+    overflow-y: scroll;
+}

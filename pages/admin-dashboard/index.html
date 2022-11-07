@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Global CSS -->
+
+    <link rel="stylesheet" href="../../src/stylesheet/globalStyle.css">
+    <link rel="stylesheet" href="../../src/stylesheet/buttonsStyle.css">
+    <link rel="stylesheet" href="../../src/stylesheet/toastfy.css">
+    <link rel="stylesheet" href="../../src/stylesheet/modal.css">
+
+    <!-- Local CSS -->
+
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="department-navigation.css">
+    <link rel="stylesheet" href="edit-info-modal.css">
+    <link rel="stylesheet" href="create-department.css">
+    <link rel="stylesheet" href="edit-department.css">
+    <link rel="stylesheet" href="delete-department.css">
+    <link rel="stylesheet" href="users-list.css">
+    <link rel="stylesheet" href="users-list-events.css">
+    <link rel="stylesheet" href="ul-style.css">
+    <link rel="stylesheet" href="li-style.css">
+
+    <!-- Javascript -->
+
+    <script defer src="department-navigation.js" type="module"></script>
+    <script defer src="create-department.js" type="module"></script>
+    <script defer src="edit-info.js" type="module"></script>
+    <script defer src="edit-department.js" type="module"></script>
+    <script defer src="users-list.js" type="module"></script>
+    <script defer src="check-storage.js" type="module"></script>
+    <script defer src="logout.js" type="module"></script>
+
+    <title>Document</title>
+    
+</head>
+
+<body>
+
+    <header class="home-header">
+        <div class="header-container">
+            <div class="logo-header">
+                <div class="ball"></div>
+                <h1 class="title">Kenzie Empresas</h1>
+            </div>
+
+            <button class="logout button-style-1">Logout</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <section class="department-section">
+            <nav class="department-navigation">
+                <h3 class="department-title">Departamentos</h3>
+                <select class="select-company"><option id="all-companies">Todos</option></select>
+                <button class="create-department button-style-2"><img class="add" src="../../src/images/icons/add.svg">Criar</button>
+            </nav>
+            <div class="ul-department">
+                <ul class="department-list"></ul>
+            </div>
+        </section>
+
+        <section class="users-section">
+            <h3 class="users-section-title">Usuários Cadastrados</h3>
+            <div class="ul-users">
+                <ul class="users-list"></ul>
+            </div>
+        </section>
+
+</body>
+</html>

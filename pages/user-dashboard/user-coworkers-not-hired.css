@@ -1,0 +1,19 @@
+.user-coworkers {
+    width: 1440px;
+    margin: 0 auto;
+    margin-top: 55px;
+}
+
+.text-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 467px;
+    border: 1px solid var(--color-blue);
+}
+
+.text-alert {
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-1);
+    margin: 0 auto;
+}

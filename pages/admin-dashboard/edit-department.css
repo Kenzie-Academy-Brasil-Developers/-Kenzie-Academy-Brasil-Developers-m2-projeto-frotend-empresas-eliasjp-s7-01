@@ -1,0 +1,16 @@
+.edit-department-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.edit-department-title {
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-1);
+}
+
+.edit-department-textarea {
+    height: 150px;
+    padding: 10px;
+    resize: none;
+}
