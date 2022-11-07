@@ -10,7 +10,8 @@
 }
 
 .modal-template {
-    width: 900px;
+    min-width: 500px;
+    max-width: 900px;
     padding: 39px 43px;
     background-color: var(--color-white);
     margin: 0 auto;

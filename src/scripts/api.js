@@ -214,3 +214,14 @@ export async function editDepartmentAPI (token, departmentID, object){
         body: JSON.stringify(object)
     })
 }
+
+export async function deleteDepartmentAPI (token, departmentID){
+    const url = "http://localhost:6278"
+
+    await fetch (`${url}/departments/${departmentID}`, {
+        method: "DELETE",
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    })
+}

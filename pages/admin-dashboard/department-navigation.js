@@ -2,6 +2,7 @@ import { getCompany, allDepartments, allDepartmentsFromCompany } from "../../src
 import { getLocal } from "../../src/scripts/storage.js"
 import { infoModal } from "../../pages/admin-dashboard/edit-info.js"
 import { editDepartmentModal } from "../../pages/admin-dashboard/edit-department.js"
+import { deleteDepartmentModal } from "../../pages/admin-dashboard/delete-department.js"
 import { modal } from "../../src/scripts/modal.js"
 
 async function departments (){
@@ -30,7 +31,6 @@ async function departments (){
                               companyIdForRender = company.uuid
                         }
                   })
-                  console.log(companyIdForRender)
                   const arrayDepartFromCompany = await allDepartmentsFromCompany (userToken.token, companyIdForRender)
                   console.log(arrayDepartFromCompany)
                   arrayDepartFromCompany.forEach(department => {
@@ -95,6 +95,9 @@ export function renderDepartments (object){
 
       const deleteDepartment = document.createElement(`button`)
             deleteDepartment.classList = `delete-department`
+            deleteDepartment.addEventListener(`click`, () => {
+                  body.append(modal (deleteDepartmentModal (object)))
+            })
 
       const deleteDepartmentIcon = document.createElement(`img`)
             deleteDepartmentIcon.classList = `button-icon`
