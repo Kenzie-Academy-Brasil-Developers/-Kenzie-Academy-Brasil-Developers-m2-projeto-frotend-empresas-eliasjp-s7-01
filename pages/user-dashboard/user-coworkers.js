@@ -63,7 +63,11 @@ function coworkersCard (coworker, list){
 
     const p = document.createElement(`p`)
           p.classList = `coworker-level`
-          p.innerHTML = coworker.professional_level
+          if (coworker.professional_level == null){
+            p.innerHTML = "Não especificado"
+          }else {
+            p.innerHTML = coworker.professional_level
+          }
 
     list.append(li)
     li.append(h4, p)
