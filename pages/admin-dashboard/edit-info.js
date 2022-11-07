@@ -1,4 +1,4 @@
-import { allWorkers, outOfWorkUsers, hireWorker, allWorkersFromDepartment, fireWorkerFromDepartment } from "../../src/scripts/api.js"
+import { allWorkers, outOfWorkUsers, hireWorker, fireWorkerFromDepartment } from "../../src/scripts/api.js"
 import { getLocal } from "../../src/scripts/storage.js"
 
 export function infoModal (object){

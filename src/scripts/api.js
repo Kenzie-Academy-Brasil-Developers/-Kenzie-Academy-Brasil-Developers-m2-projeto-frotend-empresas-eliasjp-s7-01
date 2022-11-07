@@ -225,3 +225,27 @@ export async function deleteDepartmentAPI (token, departmentID){
         }
     })
 }
+
+export async function editUserInformationADMIN (token, object, userID){
+    const url = "http://localhost:6278"
+
+    await fetch (`${url}/admin/update_user/${userID}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify(object)
+    })
+}
+
+export async function deleteUserADMIN (token, userID){
+    const url = "http://localhost:6278"
+
+    await fetch (`${url}/admin/delete_user/${userID}`, {
+        method: "DELETE",
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    })
+}

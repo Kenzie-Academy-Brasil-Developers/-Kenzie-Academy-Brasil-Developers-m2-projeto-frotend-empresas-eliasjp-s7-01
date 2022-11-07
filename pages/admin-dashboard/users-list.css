@@ -1,0 +1,49 @@
+.users-section {
+    width: 1440px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    margin-top: 69px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.users-list {
+    max-height: 385px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 52px 85px;
+    gap: 92px;
+    overflow-y: scroll;
+}
+
+.user-list-card {
+    width: 489px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid var(--color-blue);
+    padding: 18px 29px;
+}
+
+.user-list-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+.user-list-edit-user, .user-list-delete-user {
+    width: 44px;
+    height: 30px;
+    background-color: transparent;
+    border: transparent;
+}
+
+.user-list-edit-user-icon, .user-list-delete-user-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
