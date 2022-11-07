@@ -22,7 +22,7 @@ export function editUserListEvent (user){
 
     const selectProfessionalLevel = document.createElement(`select`)
           selectProfessionalLevel.classList = `edit-user-list-professional-level`
-    const profLevel = ["Não informado", "Júnior", "Pleno", "Sênior"]
+    const profLevel = ["Não informado", "Estágio", "Júnior", "Pleno", "Sênior"]
           profLevel.forEach(profLevel => {
             const optionPL = document.createElement(`option`)
                 optionPL.innerHTML = profLevel

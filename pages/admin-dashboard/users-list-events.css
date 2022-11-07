@@ -1,0 +1,15 @@
+.edit-user-list-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.edit-user-list-modality, .edit-user-list-professional-level {
+    height: 52px;
+}
+
+.delete-user-list-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
